@@ -9,7 +9,7 @@ Este projeto foi desenvolvido utilizando:
 
 ## 💻 Projeto
 
-Este é um aplicativo de geração de senhas seguras, desenvolvido para demonstrar a funcionalidade de um gerador de senhas aleatórias. O usuário pode definir uma série de opções configuráveis, como a utilização de letras maiúsculas, minúsculas, números, exclusão de caracteres semelhantes, caracteres especiais e a definição do comprimento da senha desejada. O aplicativo destaca a senha gerada e inclui botões para copiar facilmente.
+Este é um aplicativo de geração de senhas seguras, desenvolvido para demonstrar a funcionalidade de um gerador de senhas aleatórias. O usuário pode definir uma série de opções configuráveis, como a utilização de letras maiúsculas, minúsculas, números, exclusão de caracteres semelhantes, e a definição do comprimento da senha desejada. O aplicativo destaca a senha gerada e inclui botões para regenerar e copiar facilmente.
 
 Com este projeto, o foco é prática de conceitos de design de layout, gerenciamento de eventos de clique, gerenciamento de estado e boas práticas no desenvolvimento de interfaces para dispositivos móveis. Ele também explora fundamentos de segurança ao gerar senhas fortes e aleatórias para o usuário.
 
@@ -17,7 +17,7 @@ Com este projeto, o foco é prática de conceitos de design de layout, gerenciam
 
 O layout foi desenvolvido para ser intuitivo e funcional, com foco em uma boa experiência do usuário.
 
-![Interface do App](https://github.com/Micael-Resende/Password-Generator/blob/master/Images/app_password-generator.jpg)
+<img src="https://github.com/Micael-Resende/Password-Generator/blob/master/Images/app_password-generator.jpg" alt="Interface do App" width="300">
 
 ---
 
