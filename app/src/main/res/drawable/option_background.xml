@@ -1,0 +1,5 @@
+<!-- res/drawable/option_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#14FFFFFF"/> <!-- Cor branca com opacidade 0.08 -->
+    <corners android:radius="8dp"/>
+</shape>

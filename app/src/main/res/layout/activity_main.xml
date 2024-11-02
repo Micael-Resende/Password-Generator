@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background"
+    android:elevation="8dp">
+
+    <!-- Title with Image and Background Color -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cadeado"
+            android:contentDescription="@string/lock_icon"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/password_generator"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Password Display with Copy Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/option_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Campo de exibição da senha -->
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
+
+        <!-- Botão de cópia ao lado direito da senha -->
+        <ImageView
+            android:id="@+id/copyButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/copy"
+            android:contentDescription="@string/copy_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            />
+    </LinearLayout>
+
+    <!-- Indicador visual de força da senha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Texto fixo "Strength:" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strength"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Indicadores visuais de força -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/strengthView1"
+                android:layout_width="24dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/gray" />
+
+            <View
+                android:id="@+id/strengthView2"
+                android:layout_width="24dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/gray" />
+
+            <View
+                android:id="@+id/strengthView3"
+                android:layout_width="24dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/gray" />
+
+            <View
+                android:id="@+id/strengthView4"
+                android:layout_width="24dp"
+                android:layout_height="8dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <!-- Exibição do nível de segurança dinâmico -->
+        <TextView
+            android:id="@+id/passwordStrengthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weak"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Password Options with Switches -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/settings"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/option_background">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/include_uppercase_letters"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:paddingStart="7dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/uppercaseSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/option_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/include_lowercase_letters"
+            android:textSize="16sp"
+            android:paddingStart="7dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/lowercaseSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/option_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/include_numbers"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:paddingStart="7dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/numbersSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/option_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/exclude_similar_characters"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:paddingStart="7dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/similarSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/option_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/include_special_characters"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:paddingStart="7dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/specialCharactersSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_length"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Background igual às outras opções para o SeekBar e Labels -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/option_background"
+        android:padding="12dp"
+        android:layout_marginTop="8dp">
+
+        <!-- Minimum Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:text="@string/_8"
+            android:id="@+id/passwordLengthValue"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/lengthSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="56"
+            android:progress="12"/>
+
+        <!-- Maximum Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_64"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Generate Button -->
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:text="@string/generate"
+        android:background="@drawable/button_gradient"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

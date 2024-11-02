@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Password_Generator</string>
+    <string name="password_generator">PASSWORD GENERATOR</string>
+    <string name="lock_icon">Lock Icon</string>
+    <string name="copy_icon">Copy Icon</string>
+    <string name="settings">Settings</string>
+    <string name="include_uppercase_letters">Include Uppercase Letters</string>
+    <string name="include_lowercase_letters">Include Lowercase Letters</string>
+    <string name="include_numbers">Include Numbers\u00A0\u00A0\u00A0</string>
+    <string name="include_special_characters">Include Special Characters</string>
+    <string name="exclude_similar_characters">Exclude Similar Characters</string>
+    <string name="password_length">Password Length</string>
+    <string name="generate">GENERATE PASSWORD</string>
+    <string name="_64">64</string>
+    <string name="_8">8</string>
+    <string name="weak">Weak</string>
+    <string name="strength">Strength:</string>
+</resources>
